@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+body,
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+}
+
+/* Fonts */
+@font-face {
+  font-family: "sans";
+  src: url("../public/font/general/GeneralSans-Variable.ttf");
+  font-weight: 100 200 400 500 600 700 900;
+}
+
+@font-face {
+  font-family: "sarah";
+  src: url("../public/font/montreal/PPNeueMontreal-Book.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "sarah";
+  src: url("../public/font/montreal/PPNeueMontreal-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "sarah";
+  src: url("../public/font/montreal/PPNeueMontreal-Thin.ttf");
+  font-weight: 100;
+}
