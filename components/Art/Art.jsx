@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./art.module.css";
-import { motion } from "framer-motion";
+import Link from "next/link";
 
-const Art = ({ name, project }) => {
+const Art = ({ name, project, href }) => {
   return (
-    <div className={styles.art}>
+    <Link href={href} className={styles.art}>
       <div className={styles.image_reveal}>
         <img src={project} alt={name} className={styles.image} />
       </div>
@@ -12,7 +12,7 @@ const Art = ({ name, project }) => {
       <div className={styles.title}>
         <h4>[{name}]</h4>
       </div>
-    </div>
+    </Link>
   );
 };
 
