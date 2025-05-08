@@ -4,6 +4,7 @@ import React from "react";
 import "@styles/globals.css";
 import LeniScroll from "@/hooks/Lenis";
 import { Footer, Header } from "@/components";
+import { motion } from "framer-motion";
 
 export default function RootLayout({ children }) {
   LeniScroll();
@@ -23,7 +24,7 @@ export default function RootLayout({ children }) {
           content="Graphic designer, Berlin, portfolio, creative design, visual communication"
         />
         <meta name="author" content="Sarah" />
-        {/* Open Graph Tags for Social Media */}
+        {/* Open Graph Tags */}
         <meta
           property="og:title"
           content="Sarah - Graphic Designer from Berlin"
@@ -47,11 +48,17 @@ export default function RootLayout({ children }) {
         />
         <meta name="twitter:image" content="path-to-your-image.jpg" />
       </head>
-      <body>
-        <Header />
-        {children}
-        <Footer />
-      </body>
+      <motion.body
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+      >
+        <>
+          <Header />
+          {children}
+          <Footer />
+        </>
+      </motion.body>
     </html>
   );
 }

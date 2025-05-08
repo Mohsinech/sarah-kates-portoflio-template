@@ -4,6 +4,7 @@ import Art from "@/components/Art/Art";
 import styles from "./page.module.css";
 import { motion } from "framer-motion";
 import { ProjectData } from "@constants/data";
+import Link from "next/link";
 
 const DURATION = 1;
 const STAGGER = 0.2;
@@ -165,22 +166,24 @@ export default function Home() {
         <div className={styles.reach_content}>
           {reachLines.map((line, i) => (
             <div className={styles.line} key={i}>
-              <h1>
-                {line}
-                <motion.div
-                  key={i}
-                  className={styles.overflow}
-                  variants={variants}
-                  initial="hidden"
-                  whileInView="visible"
-                  transition={{
-                    duration: DURATION,
-                    delay: i * STAGGER,
-                    ease: [0.87, 0.3, 0, 1],
-                  }}
-                  viewport={{ once: false }}
-                ></motion.div>
-              </h1>
+              <Link href="#">
+                <h1>
+                  {line}
+                  <motion.div
+                    key={i}
+                    className={styles.overflow}
+                    variants={variants}
+                    initial="hidden"
+                    whileInView="visible"
+                    transition={{
+                      duration: DURATION,
+                      delay: i * STAGGER,
+                      ease: [0.87, 0.3, 0, 1],
+                    }}
+                    viewport={{ once: false }}
+                  ></motion.div>
+                </h1>
+              </Link>
             </div>
           ))}
         </div>

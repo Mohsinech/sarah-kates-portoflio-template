@@ -30,3 +30,7 @@ html {
   src: url("../public/font/montreal/PPNeueMontreal-Thin.ttf");
   font-weight: 100;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
