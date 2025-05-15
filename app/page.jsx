@@ -11,7 +11,7 @@ const STAGGER = 0.2;
 
 export default function Home() {
   // Split type lines > Her
-  const lines = ["sarah", "Kates", "Graphic", "Designer"];
+  const lines = ["sarah", "Kates", "Visual ", "Artist"];
 
   // Split type sentences > About
   const sentences = [
